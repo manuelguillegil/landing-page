@@ -1,17 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { routerLinks } from '../commons/routerLinks'
 import '../styles/link-item.scss'
 
-const navigation = [
-  { name: "Home", href: "/", current: false },
-  { name: "What is NAVI?", href: "#", current: false },
-  { name: "NAVI Services", href: "#", current: false },
-  { name: "Benefits", href: "#", current: false },
-  { name: "Careers", href: "#", current: false },
-  { name: "Contact us", href: "/about", current: false },
-];
-
-const LinkItem = ({newPageSelected, currentPage, type = 'navbar'}) => {
+const LinkItem = ({newPageSelected, currentPage, type = 'navbar', navigation = routerLinks}) => {
   navigation.map(navItem => {
     if(navItem.href === window.location.pathname) {
       navItem.current = true;

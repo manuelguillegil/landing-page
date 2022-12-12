@@ -10,9 +10,19 @@
   flex: 0 0 50px;
   background-color: rgb(36, 35, 35);
 
+  .footer-items {
+    width: 100%;
+  }
+
   .footer-text {
     color: rgb(160,160,159);
     font-size: 0.75rem;
     margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .footer-items {
+    display: none;
   }
 }

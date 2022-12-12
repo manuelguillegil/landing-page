@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
@@ -21,5 +21,23 @@
 
   .link-items {
     @include addFadeIn(3s);
+  }
+
+  .burger-section {
+    display: inherit;
+  }
+
+  .navbar-items {
+    display: none;
+  }
+
+  @media (min-width: 875px) {
+    .burger-section {
+      display: none;
+    }
+
+    .navbar-items {
+      display: inherit;
+    }
   }
 }
