@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from '../components/Header'
 
 function Home() {
   return (
-      <div className="scssClass">
-        <h2>React Js SASS / SCSS Example</h2>
+    <div className="main">
+        <Header />
     </div>
   )
 }

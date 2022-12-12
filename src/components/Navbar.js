@@ -10,7 +10,9 @@ const Navbar = ({newPageSelected, currentPage}) => {
     <div className="navbar-logo">
         <img src={bluePointImage} alt="bluepoint2-Logo-Solid-DrkBlue.png"/>
     </div>
-    <LinkItem newPageSelected={newPageSelected} currentPage={currentPage}/>
+    <div className="navbar-items">
+      <LinkItem newPageSelected={newPageSelected} currentPage={currentPage}/>
+    </div>
   </nav>
   );
 }

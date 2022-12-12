@@ -1,0 +1,28 @@
+@import './animations.scss';
+@import './colors.scss';
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  align-items: center;
+  height: calc(100vh - 6rem);
+  width: 100%;
+  background-image: url(https://static.wixstatic.com/media/c86aa8_358f73285afd482195e23f9e02bbc0a9~mv2.jpg/v1/fill/w_1265,h_537,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c86aa8_358f73285afd482195e23f9e02bbc0a9~mv2.jpg);
+  background-size: cover;
+  background-position: center;
+
+  .header-copy {
+    width: 50%;
+    grid-column: 2 / 5;
+
+    .header-title {
+      @include addFadeIn(rightFadeIn, 2s);
+      color: $primary;
+    }
+
+    .header-subtitle {
+      @include addFadeIn(rightFadeIn, 4s);
+      color: $secondary;
+    }
+  }
+}

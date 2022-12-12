@@ -42,6 +42,6 @@
   }
 }
 
-@mixin fadeInEffect($duration, $direction: topFadeIn) {
+@mixin addFadeIn($duration, $direction: topFadeIn) {
   animation: $direction $duration;
 }

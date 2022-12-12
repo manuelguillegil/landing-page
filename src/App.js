@@ -10,8 +10,9 @@ function App() {
   const [currentPage, setCurrentPage] = useState('');
 
   const newPageSelected = pageName => {
-    console.log('pageName', pageName);
-    setCurrentPage(pageName);
+    if(pageName) {
+      setCurrentPage(pageName);
+    }
   }
 
   return (

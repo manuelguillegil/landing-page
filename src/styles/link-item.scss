@@ -10,39 +10,51 @@
   a {
     text-decoration: none;
     color: $link;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 0.6rem;
   }
 
   &:last-of-type {
     border-right: none;
   }
+
+  @media (min-width: 751px) {
+    a {
+      font-size: 0.85rem;
+    }
+  }
 }
 
 .link-items {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 
-    .link-item {
-      border-right: 1px solid $link;
-      @extend %link-item-body;
+  .link-item {
+    border-right: 1px solid $link;
+    @extend %link-item-body;
 
-      a:focus, a:active, .active {
-        color: $link-active;
-      }
-
-      a:hover {
-        color: rgb(0,0,0);
-      }
+    a:focus, a:active, .active {
+      color: $link-active;
     }
 
-    .link-item-alt {
-      border-right: 1px solid #fff;
-      @extend %link-item-body;
-
-      a:focus, a:active, .active {
-        color: $secondary;
-      }
-
-      a:hover {
-        color: #fff;
-      }
+    a:hover {
+      color: rgb(0,0,0);
     }
   }
+
+  .link-item-alt {
+    border-right: 1px solid #fff;
+    @extend %link-item-body;
+
+    a:focus, a:active, .active {
+      color: $secondary;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  }
+}

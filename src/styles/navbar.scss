@@ -1,6 +1,9 @@
 @import './animations.scss';
 
 .navbar {
+  position: fixed;  
+  z-index: 1;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -9,7 +12,7 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
   .navbar-logo {
-    @include fadeInEffect(3s);
+    @include addFadeIn(3s);
 
     img {
       width: auto;
@@ -17,6 +20,6 @@
   }
 
   .link-items {
-    @include fadeInEffect(3s);
+    @include addFadeIn(3s);
   }
 }
