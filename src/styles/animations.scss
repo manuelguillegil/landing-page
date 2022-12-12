@@ -1,0 +1,47 @@
+@keyframes topFadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes leftFadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-20%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rightFadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-20%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bottomFadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@mixin fadeInEffect($duration, $direction: topFadeIn) {
+  animation: $direction $duration;
+}

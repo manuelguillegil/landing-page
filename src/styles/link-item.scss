@@ -1,0 +1,48 @@
+@import './colors.scss';
+@import './animations.scss';
+
+%link-item-body {
+  display: flex;
+  justify-content: center;
+  width: 7rem;
+  font-size: 0.875rem;
+
+  a {
+    text-decoration: none;
+    color: $link;
+  }
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.link-items {
+    display: flex;
+
+    .link-item {
+      border-right: 1px solid $link;
+      @extend %link-item-body;
+
+      a:focus, a:active, .active {
+        color: $link-active;
+      }
+
+      a:hover {
+        color: rgb(0,0,0);
+      }
+    }
+
+    .link-item-alt {
+      border-right: 1px solid #fff;
+      @extend %link-item-body;
+
+      a:focus, a:active, .active {
+        color: $secondary;
+      }
+
+      a:hover {
+        color: #fff;
+      }
+    }
+  }

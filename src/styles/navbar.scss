@@ -1,0 +1,22 @@
+@import './animations.scss';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+  .navbar-logo {
+    @include fadeInEffect(3s);
+
+    img {
+      width: auto;
+    }
+  }
+
+  .link-items {
+    @include fadeInEffect(3s);
+  }
+}
