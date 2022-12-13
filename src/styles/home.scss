@@ -1,0 +1,32 @@
+@import './colors.scss';
+@import './animations.scss';
+@import './utils.scss';
+
+.home-page-info-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url($background-overlay-image);
+  background-size: cover;
+  background-position: center;
+}
+
+.home-contact-us-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: $primary;
+  background-color: rgba(67, 200, 245, 0.47);
+  padding-bottom: 4rem;
+
+  .contact-us-section {
+    .contact-us-text {
+      color: $primary;
+    }
+  }
+
+  .home-contact-us-address {
+    @include addFadeIn(bottomFadeIn, 2s);
+  }
+}

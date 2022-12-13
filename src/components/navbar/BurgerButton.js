@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import '../../styles/burger-menu.scss'
+import '../../styles/burger-button.scss'
 import { burgerSettings } from './utils/burgerSettings'
 
 export const BurgerButton = ({ navbarOpen, setNavbarOpen }) => {

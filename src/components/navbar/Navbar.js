@@ -19,7 +19,6 @@ const Navbar = ({newPageSelected, currentPage}) => {
   }
 
   useEffect(() => {
-    console.log('aaaaa');
     window.addEventListener('scroll', controlNavbar)
     return () => {
       window.removeEventListener('scroll', controlNavbar)

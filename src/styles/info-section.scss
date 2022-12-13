@@ -1,0 +1,38 @@
+@import './animations.scss';
+@import './colors.scss';
+
+%info-section-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+
+  .info-section-icon {
+    @include addFadeIn(bottomFadeIn, 2s);
+    font-size: 5rem;
+  }
+
+  .info-section-title {
+    margin: 1rem 0;
+  }
+
+  .info-section-description {
+    max-width: 35rem;
+    text-align: center;
+  }
+}
+
+.info-section {
+  @extend %info-section-body;
+  color: white;
+  width: 100%;
+  background-color: rgba(43, 56, 140, 0.88);
+}
+
+.info-section-alt {
+  @extend %info-section-body;
+  color: $primary;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.88);
+}

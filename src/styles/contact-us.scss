@@ -22,37 +22,45 @@
     }
   }
 
-  .contact-us-items-wrapper {
+  .contact-us-items {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    max-width: 55rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.75);
 
-    .contact-us-items {
-      display: grid;
+    .contact-us-item {
+      margin-top: 1rem;
+      display: flex;
+      padding: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(43, 56, 140, 0.85);
+      color: #fff;
+
+      .contact-us-icon {
+        @include addFadeIn(bottomFadeIn, 2s);
+        font-size: 3rem;
+      }
+
+      .contact-us-item-caption {
+        @include addFadeIn(bottomFadeIn, 2s);
+      } 
+    }
+
+    @media screen and (min-width: 750px) {
       grid-template-columns: repeat(3, 1fr);
+      display: grid;
+      overflow: hidden;
       grid-gap: 1rem;
-      grid-auto-rows: minmax(100px, auto);
-      max-width: 55rem;
-      padding: 1rem;
-      background-color: rgba(255, 255, 255, 0.75);
+      grid-auto-columns: 12rem;
+      grid-auto-rows: 12rem;
+      grid-auto-flow: column;
+      grid-template-columns: 1fr;
 
       .contact-us-item {
-        display: flex;
-        padding: 2rem;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(43, 56, 140, 0.85);
-        color: #fff;
-
-        .contact-us-icon {
-          @include addFadeIn(bottomFadeIn, 2s);
-          font-size: 3rem;
-        }
-  
-        .contact-us-item-caption {
-          @include addFadeIn(bottomFadeIn, 2s);
-        }  
+        margin-top: 0rem;
       }
     }
   }
