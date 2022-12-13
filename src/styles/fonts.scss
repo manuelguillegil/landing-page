@@ -6,6 +6,14 @@
   font-size: 0.9375rem;
 }
 
+.section-title {
+  font-size: 1.25rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+}
+
 @media (min-width: 751px) {
   .header-title {
     font-size: 2.375rem;
@@ -13,5 +21,13 @@
 
   .header-subtitle {
     font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.438rem;
   }
 }

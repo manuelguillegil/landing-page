@@ -1,10 +1,5 @@
 export const burgerSettings = [
   { 
-    variableName: "--burger-menu-transform", 
-    burgerOpen: "translateX(0)", 
-    burgerClosed: "translateX(-100%)" 
-  },
-  { 
     variableName: "--burger-icon-color", 
     burgerOpen: "transparent", 
     burgerClosed: "#36393B" 

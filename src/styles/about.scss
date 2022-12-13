@@ -1,0 +1,27 @@
+@import './colors.scss';
+@import './animations.scss';
+@import './utils.scss';
+
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(0deg, $bg-accent, $bg-accent), url($background-overlay-image);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 4rem;
+
+  .about-title {
+    @include addFadeIn(topFadeIn, 2s);
+    color: #fff;
+  }
+
+  .about-image-wrapper {
+    @include addFadeIn(bottomFadeIn, 2s);
+    .about-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

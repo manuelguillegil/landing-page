@@ -1,27 +1,16 @@
 import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import '../../styles/burger-menu.scss'
-import { burgerSettings } from './utils/burgerSettings'
-
-export const BurgerButton = ({ navbarOpen, setNavbarOpen }) => {
-  useEffect(() => {
-    const root = document.documentElement;
-    burgerSettings?.forEach(settingItem => {
-      root?.style.setProperty(
-        settingItem.variableName,
-        navbarOpen ? settingItem.burgerOpen : settingItem.burgerClosed
-      );
-    })
-  }, [navbarOpen]);
-
-  return (
-    <div className={navbarOpen ? "burger-btn" : "burger-btn burger-btn-active"} onClick={() => setNavbarOpen(!navbarOpen)}>
-      <span className="burger-icon">&nbsp;</span>
-    </div>
-  )
-}
   
 export const BurgerMenu = ({navigation, currentPage, newPageSelected, navbarOpen, setNavbarOpen }) => {
+  useEffect(() => {
+    const root = document.documentElement;
+      root?.style.setProperty(
+        '--burger-menu-transform',
+        navbarOpen ? 'translateX(0)' : 'translateX(-100%)'
+      );
+  }, [navbarOpen]);
+
   const handleSelectPage = (navItem) => {
     setNavbarOpen(!navbarOpen);
     newPageSelected(navItem.name);
@@ -44,3 +33,4 @@ export const BurgerMenu = ({navigation, currentPage, newPageSelected, navbarOpen
     </div>
   )
 }
+export default BurgerMenu;
