@@ -1,8 +1,11 @@
 @import './animations.scss';
 
 .navbar {
-  position: fixed;  
+  position: fixed;
+  top: 0;  
   z-index: 1;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
   width: 100%;
   display: flex;
   align-items: center;
@@ -40,4 +43,8 @@
       display: inherit;
     }
   }
+}
+
+.hideNavbar {
+  visibility: hidden;
 }
